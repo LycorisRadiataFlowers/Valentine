@@ -5,6 +5,9 @@ let clickCount = 0;
 const fontSizeIncrements = [16, 20, 24, 28, 32, 36, 40];
 const paddingIncrements = [15, 18, 22, 26, 30, 35, 40];
 
+// Nomor WhatsApp yang sudah ditentukan (ganti dengan nomor yang diinginkan)
+const phoneNumber = '628123456789'; // Contoh: nomor Indonesia
+
 noBtn.addEventListener('click', function() {
     clickCount++;
     
@@ -39,8 +42,8 @@ yesBtn.addEventListener('click', function() {
     // Encode pesan untuk URL
     const encodedMessage = encodeURIComponent(message);
     
-    // Ubah dengan nomor whatsapp kamu      ↓  ↓  ↓
-    const whatsappUrl = `https://wa.me/${62xxxxxxxxxxx}?text=${encodedMessage}`;
+    // Buat link WhatsApp
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     
     // Buka WhatsApp di tab baru
     window.open(whatsappUrl, '_blank');
