@@ -42,8 +42,8 @@ yesBtn.addEventListener('click', function() {
     // Encode pesan untuk URL
     const encodedMessage = encodeURIComponent(message);
     
-    // Buat link WhatsApp
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    // Tambahkan nomor WhatsApp di awali dengan 62
+    const whatsappUrl = `https://wa.me/${YourNumber}?text=${encodedMessage}`;
     
     // Buka WhatsApp di tab baru
     window.open(whatsappUrl, '_blank');
