@@ -33,6 +33,19 @@ noBtn.addEventListener('click', function() {
 });
 
 yesBtn.addEventListener('click', function() {
+    // Pesan yang akan dikirim
+    const message = "aku mau menjadi partner valentine mu";
+    
+    // Encode pesan untuk URL
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Ubah dengan nomor whatsapp kamu      ↓  ↓  ↓
+    const whatsappUrl = `https://wa.me/${62xxxxxxxxxxx}?text=${encodedMessage}`;
+    
+    // Buka WhatsApp di tab baru
+    window.open(whatsappUrl, '_blank');
+    
+    // Tampilkan pesan sukses di halaman
     document.querySelector('.buttons').classList.add('hidden');
     successMessage.classList.remove('hidden');
     
